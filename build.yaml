@@ -1,0 +1,13 @@
+name: Building Hello World application
+
+on: [push, pull_request]
+
+jobs:
+  my-job:
+    runs-on : [window-latest, ubuntu-latest]
+    steps:
+      - name: Clone the git repo
+        run: git clone https://github.com/patrishamauhay/devops-lab-6.git
+
+      - name: Run the build script
+        run : make 
